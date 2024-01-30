@@ -1,0 +1,16 @@
+public class PengecekanGenap {
+
+    // Method untuk mengecek apakah suatu angka adalah genap
+    public static boolean isEven(int number) {
+        return number % 2 == 0;
+    }
+
+    public static void main(String[] args) {
+        // Pengujian metode isEven
+        int testNumber1 = 6;
+        int testNumber2 = 7;
+
+        System.out.println(testNumber1 + " adalah angka genap: " + isEven(testNumber1));
+        System.out.println(testNumber2 + " adalah angka genap: " + isEven(testNumber2));
+    }
+} 
