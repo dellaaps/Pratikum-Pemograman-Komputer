@@ -1,0 +1,19 @@
+public class PengembalianNilai {
+    
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int numToCheck = 5;
+        System.out.println(numToCheck + " is prime: " + isPrime(numToCheck));
+    }
+}
