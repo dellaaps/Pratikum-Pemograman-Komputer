@@ -1,0 +1,24 @@
+public class PeriksaNomor {
+
+    // Method untuk mengecek apakah sebuah bilangan bulat adalah bilangan prima atau bukan
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false; // Bilangan kurang dari atau sama dengan 1 bukan prima
+        }
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false; // Jika ditemukan pembagi selain 1 dan dirinya sendiri, bukan prima
+            }
+        }
+        return true; // Jika tidak ada pembagi selain 1 dan dirinya sendiri, prima
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Bilangan prima antara 1 dan 500:");
+        for (int i = 1; i <= 500; i++) {
+            if (isPrime(i)) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+} 
